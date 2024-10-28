@@ -1,0 +1,539 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
+$main-color: #ff98b2;
+$primary-color: #16a0d8;
+$info-color: #89dcfe;
+$secondary-color: #aaaaaa;
+$danger-color: #f70f68;
+$warning-color: #ffbe25;
+$success-color: #00d800;
+$light-color: #ffffff;
+$dark-color: #000000;
+$main-font: "Sora", serif;
+
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: $main-font;
+}
+
+nav {
+  background-color: $main-color;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  .logo-and-title {
+    display: flex;
+    align-items: center;
+    img {
+      width: 50px;
+    }
+    h1 {
+      margin-left: 10px;
+      color: #ffc0df;
+      font-weight: bolder;
+      text-shadow: $danger-color 1px 1px 2px;
+      transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+    }
+  }
+  ul {
+    display: flex;
+    list-style: none;
+    li {
+      //   margin-left: 20px;
+      padding: 5px 15px;
+      a {
+        text-transform: uppercase;
+        color: $light-color;
+        text-decoration: none;
+        transition: color 0.2s ease-in-out;
+        font-weight: normal;
+        &:hover {
+          color: $danger-color;
+        }
+      }
+      &.active {
+        font-weight: bolder !important;
+        background-color: $light-color;
+        border-radius: 2px;
+        a {
+          color: $danger-color;
+        }
+      }
+    }
+    .signin {
+      margin-left: 20px;
+      a {
+        color: $danger-color;
+        text-decoration: none;
+        transition: color 0.2s ease-in-out;
+        font-weight: bolder !important;
+        text-shadow: $main-color 1px 1px 0px;
+      }
+    }
+  }
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    .bar {
+      display: block;
+      width: 30px;
+      border-radius: 3px;
+      padding: 1.5px;
+      margin: 5px auto;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      background-color: $light-color;
+    }
+  }
+}
+
+.carousel {
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+  position: relative;
+  .list {
+    .item {
+      position: absolute;
+      inset: 0 0 0 0;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .content {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        width: 1140px;
+        max-width: 80%;
+        transform: translateX(-50%);
+        padding-right: 30%;
+        box-sizing: border-box;
+        color: $light-color;
+        text-shadow: 1px 1px 2px $main-color;
+      }
+      .title {
+        font-weight: bold;
+        font-size: 2.3em;
+        list-style: 1.3em;
+        color: $danger-color;
+      }
+      .buttons {
+        display: grid;
+        grid-template-columns: repeat(2, 130px);
+        grid-template-rows: 40px;
+        gap: 10px;
+        margin-top: 20px;
+        button {
+          border: none;
+          outline: none;
+          background-color: $danger-color;
+          color: $light-color;
+          font-weight: 500;
+          cursor: pointer;
+        }
+        button:nth-child(2) {
+          background-color: transparent;
+          border: 1px solid $danger-color;
+          cursor: pointer;
+          color: $light-color;
+        }
+      }
+    }
+  }
+}
+
+.home-head {
+  text-align: center;
+  padding: 20px;
+  .title {
+    font-size: 2.5em;
+    font-weight: bolder;
+    margin-bottom: 5px;
+  }
+  .tagline {
+    color: $secondary-color;
+    margin-bottom: 20px;
+  }
+}
+
+.thumnail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .card-thumnail {
+    width: 50%;
+    text-align: center;
+    padding: 8%;
+    .title {
+      font-size: 2.5em;
+      font-weight: bolder;
+      margin-bottom: 5px;
+    }
+    .desc {
+      color: $secondary-color;
+      margin-bottom: 20px;
+    }
+    .buttons {
+      display: grid;
+      justify-content: center;
+      grid-template-columns: repeat(2, 130px);
+      grid-template-rows: 40px;
+      gap: 10px;
+      margin-top: 20px;
+      button {
+        border: none;
+        outline: none;
+        background-color: $danger-color;
+        color: $light-color;
+        font-weight: 500;
+        cursor: pointer;
+      }
+      button:nth-child(2) {
+        background-color: transparent;
+        border: 1px solid $danger-color;
+        cursor: pointer;
+        color: $dark-color;
+      }
+    }
+  }
+}
+
+.valueable {
+  background: #dff5ff91;
+  padding: 50px 10px;
+  display: flex;
+  justify-content: space-evenly;
+  .box {
+    text-align: center;
+    .percentage {
+      font-size: 2em;
+      color: $dark-color;
+      text-shadow: 1px 1px 2px $light-color;
+    }
+    .text {
+      color: $secondary-color;
+    }
+  }
+}
+
+.reviewer {
+  .title {
+    font-size: 2em;
+    font-weight: bolder;
+    margin-bottom: 5px;
+    margin-top: 20px;
+    text-align: center;
+  }
+  .tagline {
+    text-align: center;
+    color: $secondary-color;
+  }
+  .reviewer-cards {
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    .card {
+      width: 45%;
+      padding: 20px;
+      box-shadow: #0000001a 0px 0px 5px 0px, #0000001a 0px 0px 1px 0px;
+    }
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      .avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .name-and-star {
+        display: flex;
+        flex-direction: column;
+        margin-left: 15px;
+        .name {
+          font-size: 0.9em;
+          font-weight: bolder;
+          margin-bottom: 5px;
+        }
+        img {
+          width: 80px;
+        }
+      }
+    }
+    .card-body {
+      margin-top: 20px;
+      font-size: 0.9em;
+      color: $secondary-color;
+      line-height: 2em;
+      .review-caption {
+        color: $dark-color;
+        font-size: 1.2em;
+      }
+    }
+  }
+}
+
+.footage {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 15px;
+  .title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: $secondary-color;
+  }
+  button {
+    border: none;
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 20px;
+    color: $light-color;
+    background-color: $primary-color;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    cursor: pointer;
+    svg {
+      width: 20px;
+      margin-left: 10px;
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+}
+
+.block-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 30px;
+  .footer-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    .title {
+      font-size: 1.2em;
+      font-weight: bold;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+    div ul {
+      padding: 0;
+      list-style: none;
+      li {
+        margin-bottom: 5px;
+        a {
+          text-decoration: none;
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+}
+
+.block-center {
+  display: flex;
+  justify-content: center;
+  a {
+    text-decoration: none;
+    color: $warning-color;
+    font-size: 0.9em;
+    margin: 10px;
+  }
+}
+
+.block-end {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 30px;
+  margin-top: -10px;
+  font-size: 0.8em;
+  .start {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p:nth-child(2) {
+      margin-left: 20px;
+    }
+  }
+}
+
+// MEDIA QUERIES
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) and (min-width: 0px) {
+  nav {
+    ul {
+      display: none;
+    }
+    .hamburger {
+      display: block;
+    }
+  }
+
+  .carousel {
+    width: 100%;
+    height: 70vh !important;
+    .list {
+      .item {
+        position: absolute;
+        .content {
+          max-width: 90%;
+          padding-right: 10%;
+        }
+      }
+    }
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+  nav {
+    ul {
+      display: none;
+    }
+    .hamburger {
+      display: block;
+    }
+  }
+
+  .carousel {
+    width: 100%;
+    height: 50vh;
+    .list {
+      .item {
+        position: absolute;
+        .content {
+          max-width: 90%;
+          padding-right: 10%;
+        }
+      }
+    }
+  }
+
+  .thumnail {
+    align-items: end;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: relative;
+    }
+    .card-thumnail {
+      position: absolute;
+      z-index: 100;
+      padding: 10px 8%;
+      width: auto;
+      box-sizing: border-box;
+      color: $light-color;
+      background: linear-gradient(180deg, #ffffff00 0%, #000000da 100%);
+      .buttons {
+        button:nth-child(2) {
+          color: $light-color;
+        }
+      }
+    }
+  }
+
+  .reviewer {
+    .reviewer-cards {
+      gap: 15px;
+      .card {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 576px) and (max-width: 768px) {
+  nav {
+    ul {
+      display: none;
+    }
+    .hamburger {
+      display: block;
+    }
+  }
+
+  .carousel {
+    width: 100%;
+    height: 40vh;
+    .list {
+      .item {
+        position: absolute;
+        .content {
+          max-width: 90%;
+          padding-right: 10%;
+        }
+      }
+    }
+  }
+
+  .thumnail {
+    align-items: end;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: relative;
+    }
+    .card-thumnail {
+      position: absolute;
+      z-index: 100;
+      padding: 10px 8%;
+      width: auto;
+      box-sizing: border-box;
+      color: $light-color;
+      background: linear-gradient(180deg, #ffffff00 0%, #000000da 100%);
+      .buttons {
+        button:nth-child(2) {
+          color: $light-color;
+        }
+      }
+    }
+  }
+
+  .reviewer {
+    .reviewer-cards {
+      gap: 15px;
+      .card {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 768px) and (max-width: 992px) {
+  .reviewer {
+    .reviewer-cards {
+      gap: 10px;
+      .card {
+        width: 40%;
+      }
+    }
+  }
+}

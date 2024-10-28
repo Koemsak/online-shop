@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
+.products-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+}
+.products-card .product {
+  width: 23%;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.products-card .product img {
+  width: 100%;
+}
+.products-card .product .product-info {
+  text-align: center;
+}
+.products-card .product .product-info .product-name {
+  font-size: 1.5em;
+}
+.products-card .product .product-info .product-stars img {
+  width: 100px;
+}
+.products-card .product .product-info .product-price {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+.products-card .product .product-info button {
+  border: none;
+  padding: 10px;
+  width: 100%;
+  color: #ffffff;
+  background-color: #f70f68;
+  cursor: pointer;
+}/*# sourceMappingURL=bags.css.map */
