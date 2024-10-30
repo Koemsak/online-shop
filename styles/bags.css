@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
 .products-card {
-  display: flex;
-  flex-wrap: wrap;
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   gap: 10px;
-  padding: 20px;
 }
 .products-card .product {
-  width: 23%;
   padding: 10px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
@@ -33,4 +33,165 @@
   color: #ffffff;
   background-color: #f70f68;
   cursor: pointer;
+}
+.products-card .product:hover {
+  transition: all 0.3s ease-in-out;
+  box-shadow: inset 0 0 0 2px #f70f68;
+  cursor: pointer;
+}
+
+.popular-products {
+  padding-top: 30px;
+  width: 90%;
+  margin: auto;
+}
+.popular-products .head-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.popular-products .head-title .title {
+  font-size: 1.5em;
+  font-weight: bolder;
+  margin-bottom: 5px;
+}
+.popular-products .head-title .view-all a {
+  text-decoration: none;
+  color: #16a0d8;
+  font-weight: bolder;
+}
+.popular-products .popular-body {
+  display: flex;
+  gap: 5px;
+  margin: 0 auto;
+}
+.popular-products .popular-body .popular-side {
+  width: 40%;
+  display: flex;
+  align-items: center;
+}
+.popular-products .popular-body .popular-side img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.popular-products .popular-body .popular-main {
+  width: 60%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 5px;
+  height: 100%;
+}
+.popular-products .popular-body .popular-main img {
+  background: rgba(232, 232, 232, 0.5764705882);
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.best-trending-products {
+  padding-top: 30px;
+  width: 90%;
+  margin: auto;
+  height: 100%;
+  box-sizing: border-box;
+}
+.best-trending-products .head-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.best-trending-products .head-title .title {
+  font-size: 1.5em;
+  font-weight: bolder;
+  margin-bottom: 5px;
+}
+.best-trending-products .head-title .view-all a {
+  text-decoration: none;
+  color: #16a0d8;
+  font-weight: bolder;
+}
+.best-trending-products .best-trending-body {
+  display: grid;
+  grid-template-columns: 60% 1fr; /* 60% for image, remaining for product cards */
+  gap: 5px;
+}
+.best-trending-products .best-trending-body .best-trending-side {
+  display: flex;
+  align-items: start;
+}
+.best-trending-products .best-trending-body .best-trending-side img {
+  width: 100%;
+  height: auto;
+}
+.best-trending-products .best-trending-body .best-trending-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  align-content: start;
+}
+.best-trending-products .best-trending-body .best-trending-cards .product {
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  text-align: center;
+}
+.best-trending-products .best-trending-body .best-trending-cards .product img {
+  width: 100%;
+}
+.best-trending-products .best-trending-body .best-trending-cards .product .product-info {
+  text-align: center;
+}
+.best-trending-products .best-trending-body .best-trending-cards .product .product-info .product-name {
+  font-size: 1.5em;
+}
+.best-trending-products .best-trending-body .best-trending-cards .product .product-info .product-stars img {
+  width: 100px;
+}
+.best-trending-products .best-trending-body .best-trending-cards .product .product-info .product-price {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+.best-trending-products .best-trending-body .best-trending-cards .product .product-info button {
+  border: none;
+  padding: 10px;
+  width: 100%;
+  color: #ffffff;
+  background-color: #f70f68;
+  cursor: pointer;
+}
+.best-trending-products .best-trending-body .best-trending-cards .product:hover {
+  transition: all 0.3s ease-in-out;
+  box-shadow: inset 0 0 0 2px #f70f68;
+  cursor: pointer;
+}
+
+@media (max-width: 575.98px) and (min-width: 0px) {
+  .products-card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 576px) {
+  .products-card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .products-card {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .products-card {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .products-card {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }/*# sourceMappingURL=bags.css.map */

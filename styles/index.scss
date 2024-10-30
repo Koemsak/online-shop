@@ -34,7 +34,7 @@ nav {
     }
     h1 {
       margin-left: 10px;
-      color: #ffc0df;
+      color: $light-color;
       font-weight: bolder;
       text-shadow: $danger-color 1px 1px 2px;
       transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
@@ -115,8 +115,8 @@ nav {
         transform: translateX(-50%);
         padding-right: 30%;
         box-sizing: border-box;
-        color: $light-color;
-        text-shadow: 1px 1px 2px $main-color;
+        color: $dark-color;
+        text-shadow: 1px 1px 2px $light-color;
       }
       .title {
         font-weight: bold;
