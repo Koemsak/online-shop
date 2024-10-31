@@ -65,6 +65,9 @@ nav ul .signin a {
   font-weight: bolder !important;
   text-shadow: #ff98b2 1px 1px 0px;
 }
+nav ul .close {
+  display: none;
+}
 nav .hamburger {
   display: none;
   cursor: pointer;
@@ -77,6 +80,9 @@ nav .hamburger .bar {
   margin: 5px auto;
   transition: all 0.3s ease-in-out;
   background-color: #ffffff;
+}
+nav #check {
+  display: none;
 }
 
 .carousel {
@@ -229,6 +235,7 @@ nav .hamburger .bar {
 .reviewer .reviewer-cards {
   padding: 30px;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
 }
@@ -368,10 +375,45 @@ nav .hamburger .bar {
 
 @media (max-width: 575.98px) and (min-width: 0px) {
   nav ul {
-    display: none;
+    padding: 45px 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: fixed;
+    z-index: 1000;
+    margin: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    justify-content: start;
+    background-color: #16a0d8;
+    transform: translateX(100%);
+  }
+  nav ul .close {
+    position: absolute;
+    font-size: 2.5em;
+    color: #f70f68;
+    top: -5px;
+    right: 10px;
+    cursor: pointer;
+    display: block;
+  }
+  nav ul li {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 20px;
+  }
+  nav ul li a {
+    color: #ffffff;
+  }
+  nav ul .signin {
+    margin: 0;
   }
   nav .hamburger {
     display: block;
+  }
+  nav #check:checked ~ ul {
+    transform: translateX(0);
   }
   .carousel {
     width: 100%;
@@ -387,10 +429,45 @@ nav .hamburger .bar {
 }
 @media (max-width: 576px) {
   nav ul {
-    display: none;
+    padding: 45px 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: fixed;
+    z-index: 1000;
+    margin: 0;
+    top: 0;
+    right: 0;
+    width: 250px;
+    justify-content: start;
+    background-color: #16a0d8;
+    transform: translateX(100%);
+  }
+  nav ul .close {
+    position: absolute;
+    font-size: 2.5em;
+    color: #f70f68;
+    top: -5px;
+    right: 10px;
+    cursor: pointer;
+    display: block;
+  }
+  nav ul li {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 20px;
+  }
+  nav ul li a {
+    color: #ffffff;
+  }
+  nav ul .signin {
+    margin: 0;
   }
   nav .hamburger {
     display: block;
+  }
+  nav #check:checked ~ ul {
+    transform: translateX(0);
   }
   .carousel {
     width: 100%;
@@ -415,7 +492,7 @@ nav .hamburger .bar {
   }
   .thumnail .card-thumnail {
     position: absolute;
-    z-index: 100;
+    z-index: 9;
     padding: 10px 8%;
     width: auto;
     box-sizing: border-box;
@@ -434,14 +511,49 @@ nav .hamburger .bar {
 }
 @media (min-width: 576px) and (max-width: 768px) {
   nav ul {
-    display: none;
+    padding: 45px 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: fixed;
+    z-index: 1000;
+    margin: 0;
+    top: 0;
+    right: 0;
+    width: 250px;
+    justify-content: start;
+    background-color: #16a0d8;
+    transform: translateX(100%);
+  }
+  nav ul .close {
+    position: absolute;
+    font-size: 2.5em;
+    color: #f70f68;
+    top: -5px;
+    right: 10px;
+    cursor: pointer;
+    display: block;
+  }
+  nav ul li {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 20px;
+  }
+  nav ul li a {
+    color: #ffffff;
+  }
+  nav ul .signin {
+    margin: 0;
   }
   nav .hamburger {
     display: block;
   }
+  nav #check:checked ~ ul {
+    transform: translateX(0);
+  }
   .carousel {
     width: 100%;
-    height: 40vh;
+    height: 70vh;
   }
   .carousel .list .item {
     position: absolute;
@@ -462,7 +574,7 @@ nav .hamburger .bar {
   }
   .thumnail .card-thumnail {
     position: absolute;
-    z-index: 100;
+    z-index: 9;
     padding: 10px 8%;
     width: auto;
     box-sizing: border-box;
